@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Lab1" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="robotChicken" translatesAutoresizingMaskIntoConstraints="NO" id="0oJ-jk-n1M">
+                                <rect key="frame" x="80" y="114" width="440" height="370"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="0oJ-jk-n1M" secondAttribute="height" multiplier="44:37" id="7Lg-M5-2VR"/>
+                                    <constraint firstAttribute="width" secondItem="0oJ-jk-n1M" secondAttribute="height" multiplier="323:270" id="BDx-kP-KoY"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" priority="750" constant="300" id="V5g-D4-ZyA"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" priority="750" constant="440" id="t5m-A4-PRq"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="BDx-kP-KoY"/>
+                                        <exclude reference="V5g-D4-ZyA"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=compact-widthClass=compact">
+                                    <mask key="constraints">
+                                        <exclude reference="7Lg-M5-2VR"/>
+                                        <include reference="BDx-kP-KoY"/>
+                                        <exclude reference="V5g-D4-ZyA"/>
+                                        <exclude reference="t5m-A4-PRq"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="50" translatesAutoresizingMaskIntoConstraints="NO" id="Vam-86-DJ3">
+                                <rect key="frame" x="208" y="494" width="184" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IcJ-pB-JcO">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="30"/>
+                                        <state key="normal" title="Star Wars"/>
+                                        <connections>
+                                            <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="MJa-q1-wnQ"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMs-z6-Wu4">
+                                        <rect key="frame" x="117" y="0.0" width="67" height="30"/>
+                                        <state key="normal" title="Star Trek"/>
+                                        <connections>
+                                            <action selector="chooseImage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4Q7-5C-ahb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Robot Chicken" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ztF-Vz-xfN">
+                                <rect key="frame" x="234" y="63" width="132" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.4" id="07m-Pu-EjE">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstItem="Vam-86-DJ3" firstAttribute="top" secondItem="0oJ-jk-n1M" secondAttribute="bottom" constant="5" id="8JC-6T-4XL">
+                                <variation key="heightClass=compact-widthClass=compact" constant="10"/>
+                            </constraint>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Vam-86-DJ3" secondAttribute="bottom" constant="10" id="AAk-El-QTw"/>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="DnM-Ny-17j"/>
+                            <constraint firstItem="ztF-Vz-xfN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ier-HK-jbQ"/>
+                            <constraint firstItem="ztF-Vz-xfN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="43" id="Roj-fl-hGt"/>
+                            <constraint firstItem="Vam-86-DJ3" firstAttribute="centerX" secondItem="0oJ-jk-n1M" secondAttribute="centerX" id="S9C-c6-tUQ">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-1"/>
+                            </constraint>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ssq-eg-bjW">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-6"/>
+                            </constraint>
+                            <constraint firstItem="ztF-Vz-xfN" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="ToQ-At-Jfr">
+                                <variation key="heightClass=compact-widthClass=compact" constant="0.0"/>
+                            </constraint>
+                            <constraint firstAttribute="trailingMargin" secondItem="0oJ-jk-n1M" secondAttribute="trailing" constant="20" id="U68-Gf-G7e"/>
+                            <constraint firstItem="Vam-86-DJ3" firstAttribute="top" secondItem="0oJ-jk-n1M" secondAttribute="bottom" constant="10" id="Vii-qN-70N"/>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="centerX" secondItem="ztF-Vz-xfN" secondAttribute="centerX" id="aKq-iv-jJN"/>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="20" id="aMM-oc-My7"/>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="width" relation="lessThanOrEqual" secondItem="8bC-Xf-vdC" secondAttribute="width" priority="750" id="c3r-QS-wtk"/>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="top" secondItem="ztF-Vz-xfN" secondAttribute="bottom" constant="5" id="cnq-ME-Zqw">
+                                <variation key="heightClass=compact-widthClass=compact" constant="8"/>
+                            </constraint>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fES-GH-qW9">
+                                <variation key="heightClass=compact-widthClass=compact" constant="1"/>
+                            </constraint>
+                            <constraint firstItem="Vam-86-DJ3" firstAttribute="centerX" secondItem="0oJ-jk-n1M" secondAttribute="centerX" id="jpB-Uj-aub"/>
+                            <constraint firstItem="ztF-Vz-xfN" firstAttribute="centerX" secondItem="0oJ-jk-n1M" secondAttribute="centerX" id="kkJ-so-5eq">
+                                <variation key="heightClass=compact-widthClass=compact" constant="-1"/>
+                            </constraint>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" priority="750" id="x6c-11-6h5"/>
+                            <constraint firstItem="0oJ-jk-n1M" firstAttribute="top" secondItem="ztF-Vz-xfN" secondAttribute="bottom" constant="27" id="zrX-da-uxv"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="07m-Pu-EjE"/>
+                                <exclude reference="Ssq-eg-bjW"/>
+                                <exclude reference="U68-Gf-G7e"/>
+                                <exclude reference="aMM-oc-My7"/>
+                                <exclude reference="cnq-ME-Zqw"/>
+                                <exclude reference="fES-GH-qW9"/>
+                                <exclude reference="x6c-11-6h5"/>
+                                <exclude reference="ToQ-At-Jfr"/>
+                                <exclude reference="kkJ-so-5eq"/>
+                                <exclude reference="8JC-6T-4XL"/>
+                                <exclude reference="S9C-c6-tUQ"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="07m-Pu-EjE"/>
+                                <exclude reference="DnM-Ny-17j"/>
+                                <include reference="Ssq-eg-bjW"/>
+                                <exclude reference="U68-Gf-G7e"/>
+                                <exclude reference="aKq-iv-jJN"/>
+                                <exclude reference="aMM-oc-My7"/>
+                                <exclude reference="c3r-QS-wtk"/>
+                                <include reference="cnq-ME-Zqw"/>
+                                <include reference="fES-GH-qW9"/>
+                                <exclude reference="x6c-11-6h5"/>
+                                <exclude reference="zrX-da-uxv"/>
+                                <exclude reference="Ier-HK-jbQ"/>
+                                <exclude reference="Roj-fl-hGt"/>
+                                <include reference="ToQ-At-Jfr"/>
+                                <include reference="kkJ-so-5eq"/>
+                                <include reference="8JC-6T-4XL"/>
+                                <include reference="S9C-c6-tUQ"/>
+                                <exclude reference="Vii-qN-70N"/>
+                                <exclude reference="jpB-Uj-aub"/>
+                                <exclude reference="AAk-El-QTw"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="label" destination="ztF-Vz-xfN" id="SMf-5Z-HQk"/>
+                        <outlet property="robotImage" destination="0oJ-jk-n1M" id="Qd6-hM-btE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="304.5" y="387"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="robotChicken" width="440" height="370"/>
+    </resources>
+</document>
