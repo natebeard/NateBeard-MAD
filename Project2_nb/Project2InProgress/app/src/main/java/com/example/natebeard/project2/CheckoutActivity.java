@@ -1,5 +1,6 @@
 package com.example.natebeard.project2;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -8,7 +9,7 @@ import android.widget.RadioGroup;
 public class CheckoutActivity extends AppCompatActivity {
 
     //Create private variables price_number and total_number and image to get data from petPrice and imageView
-    private String priceNumber;
+    private int priceNumber;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +26,9 @@ public class CheckoutActivity extends AppCompatActivity {
         // price_number TextView to petPrice
         // total_number = price_number * 1.1
 
-        //Intent intent = getIntent();
+        Intent intent = getIntent();
+        priceNumber = intent.getIntExtra("animalPriceValue", 0);
 
-        //priceNumber = intent.getIntExtra("animalPriceValue", petPrice);
 
         /*
          //get intent
@@ -41,16 +42,7 @@ public class CheckoutActivity extends AppCompatActivity {
         TextView messageView = (TextView) findViewById(R.id.coffeeShopTextView);
         messageView.setText("You should check out " + coffeeShop);
 
-        //get image button
-        final ImageButton imageButton = (ImageButton) findViewById(R.id.imageButton);
-        //create listener
-        View.OnClickListener onclick = new View.OnClickListener(){
-            public void onClick(View view){
-                loadWebSite(view);
-            }
-        };
-        //add listener to the button
-        imageButton.setOnClickListener(onclick);
+
          */
 
 

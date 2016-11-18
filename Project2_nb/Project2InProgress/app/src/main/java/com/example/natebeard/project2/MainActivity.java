@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
@@ -16,9 +17,19 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final Button goToCheckout = (Button)findViewById(R.id.checkout_button);
+        View.OnClickListener onclick = new View.OnClickListener() {
+            public void onClick(View view) {
+                generatePetAction(view);
+            }
+        };
+
+        goToCheckout.setOnClickListener(onclick);
     }
 
-    private Integer petPrice;
+    private int petPrice;
+    private String imageFinalScreen;
 
     public void generatePetAction(View view){
         Spinner animalSpinner = (Spinner)findViewById(R.id.spinner);
@@ -125,34 +136,11 @@ public class MainActivity extends AppCompatActivity {
         }
 
 
-
-
-
-    }
-
-    public void goToCheckout(View view) {
-
         Intent intent = new Intent(this, CheckoutActivity.class);
         intent.putExtra("animalPriceValue", petPrice);
         startActivity(intent);
+
     }
-    //Create checkout button
-    // find checkout button
-    // create listener for generatePetAction data: petPrice and imageView data to pass
-    // add listener to button that makes it go to next screen
-
-
-
-    //Example code:
-           /* final Button button = (Button) findViewById(R.id.button);
-        //create listener
-        View.OnClickListener onclick = new View.OnClickListener(){
-            public void onClick(View view){
-                findCoffee(view);
-            }
-        };
-        //add listener to the button
-        button.setOnClickListener(onclick);*/
 
 
 
