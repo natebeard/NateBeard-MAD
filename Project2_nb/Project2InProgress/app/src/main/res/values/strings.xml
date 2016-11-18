@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Build-Your-Own Pet</string>
+    <string-array name="animals">
+        <item>Cat</item>
+        <item>Dog</item>
+        <item>Elephant</item>
+    </string-array>
+    <string name="type_of_animal_radiogroup"></string>
+    <string name="radio1">Prehistoric</string>
+    <string name="radio2">Future Alien</string>
+    <string name="toggle_on">Female</string>
+    <string name="toggle_off">Male</string>
+    <string name="genderToggleButton"></string>
+    <string name="wings_switch">Wings?</string>
+    <string name="generate_button">Generate Pet!</string>
+    <string name="checkout_button">Proceed to checkout</string>
+    <string name="radio_text">Choose Type:</string>
+    <string name="size">Size:</string>
+    <string name="radio_lap_size">Lap Size</string>
+    <string name="radio_knee_high">Knee High</string>
+    <string name="radio_waist_size">Waist Height</string>
+    <string name="radio_small_car">Small Car</string>
+    <string name="price">Price:</string>
+    <string name="total">Total</string>
+    <string name="price_number">0</string>
+    <string name="total_number">0</string>
+    <string name="image_final"></string>
+
+
+
+</resources>
