@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.RadioGroup;
+import android.widget.TextView;
 
 public class CheckoutActivity extends AppCompatActivity {
 
@@ -28,6 +29,9 @@ public class CheckoutActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
         priceNumber = intent.getIntExtra("animalPriceValue", 0);
+        TextView priceNumberText = (TextView)findViewById(R.id.price_number);
+        String priceValue = String.valueOf(priceNumber);
+        priceNumberText.setText(priceValue);
 
 
         /*

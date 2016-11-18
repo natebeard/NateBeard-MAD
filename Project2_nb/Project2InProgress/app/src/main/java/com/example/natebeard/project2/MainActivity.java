@@ -13,23 +13,14 @@ import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
 
+    private int petPrice;
+    private String imageFinalScreen;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        final Button goToCheckout = (Button)findViewById(R.id.checkout_button);
-        View.OnClickListener onclick = new View.OnClickListener() {
-            public void onClick(View view) {
-                generatePetAction(view);
-            }
-        };
-
-        goToCheckout.setOnClickListener(onclick);
     }
-
-    private int petPrice;
-    private String imageFinalScreen;
 
     public void generatePetAction(View view){
         Spinner animalSpinner = (Spinner)findViewById(R.id.spinner);
@@ -98,7 +89,6 @@ public class MainActivity extends AppCompatActivity {
             animalImage.setImageResource(R.drawable.sabertoothmalewing);
         } else if (animalValue.equals("Dog") && typeOfAnimal.equals("Prehistoric") && genderAnimal.equals("female") && wings.equals("yes")) {
             animalImage.setImageResource(R.drawable.sabertoothmalewing);
-            //
         } else if (animalValue.equals("Dog") && typeOfAnimal.equals("Prehistoric") && genderAnimal.equals("female") && wings.equals("no")) {
             animalImage.setImageResource(R.drawable.sabertoothmalewing);
         } else if (animalValue.equals("Dog") && typeOfAnimal.equals("Alien") && genderAnimal.equals("male") && wings.equals("no")) {
@@ -135,13 +125,20 @@ public class MainActivity extends AppCompatActivity {
             petPrice = 3000;
         }
 
+    }
+    public void goToCheckout(View view){
+        Button clickCheckout = (Button)findViewById(R.id.checkout_button);
+        View.OnClickListener onclick = new View.OnClickListener() {
+            public void onClick(View view) {
+                generatePetAction(view);
+            }
+        };
+
+        clickCheckout.setOnClickListener(onclick);
 
         Intent intent = new Intent(this, CheckoutActivity.class);
         intent.putExtra("animalPriceValue", petPrice);
         startActivity(intent);
-
     }
-
-
 
 }
