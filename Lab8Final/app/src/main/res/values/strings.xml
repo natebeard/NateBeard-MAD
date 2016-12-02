@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Lab8</string>
+    <string name="title">Burrito Finder</string>
+    <string name="burrito_type">Elige a tus amigos</string>
+    <string name="button">Find Burritos</string>
+    <string-array name="crowd">
+        <item>Breakfast amigos</item>
+        <item>OGs</item>
+        <item>Drinking amigos</item>
+        <item>Bang for your buck</item>
+    </string-array>
+    <string name="burrito_image">burrito art</string>
+
+</resources>
