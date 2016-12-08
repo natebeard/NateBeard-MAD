@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.natebeard.finalpractice2.MainActivity">
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:ems="10"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/editNameText"
+        android:hint="@string/name_textfield"/>
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editNameText"
+        android:layout_centerHorizontal="true"
+        android:entries="@array/mood"
+        android:layout_marginTop="23dp"
+        android:id="@+id/spinner" />
+
+    <ToggleButton
+        android:text="ToggleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:id="@+id/genderToggleButton"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:textOn="@string/toggle_on"
+        android:textOff="@string/toggle_off"/>
+
+    <Switch
+        android:text="@string/friend_switch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/genderToggleButton"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/friendSwitch" />
+
+    <TextView
+        android:text="@string/drinks_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/genderToggleButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:id="@+id/drinkTextView" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/drinkTextView"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:id="@+id/drinks_radio_group">
+
+        <RadioButton
+            android:text="@string/beer_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/beerRadioButton" />
+
+        <RadioButton
+            android:text="@string/whiskey_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/whiskeyRadioButton2"
+            android:layout_marginEnd="10dp"/>
+
+    </RadioGroup>
+
+    <CheckBox
+        android:text="@string/hungry_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/drinkTextView"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:id="@+id/hungryCheckBox" />
+
+    <CheckBox
+        android:text="@string/chatty_checkbox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/hungryCheckBox"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/chattyCheckBox"
+        android:layout_below="@+id/drinks_radio_group"/>
+
+    <Button
+        android:text="@string/generate_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/generateButton"
+        android:layout_below="@+id/chattyCheckBox"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="12dp"
+        android:onClick="getTheFeelin"/>
+
+    <TextView
+        android:text="@string/text_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/generateButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:id="@+id/moodText" />
+
+    <Button
+        android:text="@string/find_place_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="12dp"
+        android:id="@+id/findPlaceButton"
+        android:visibility="invisible"
+        android:onClick="goToNextActivity"/>
+</RelativeLayout>

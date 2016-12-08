@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">FinalPractice</string>
+    <string name="name">Name</string>
+    <array name="mood">
+        <item>happy</item>
+        <item>weird</item>
+        <item>curious</item>
+    </array>
+    <string name="toggle_on">Female</string>
+    <string name="toggle_off">Male</string>
+    <string name="read_switch">Reads</string>
+    <string name="drink">Drinks</string>
+    <string name="drinks_radio_group"></string>
+    <string name="wine">Wine</string>
+    <string name="beer">Beer</string>
+    <string name="when">When?</string>
+    <string name="happy_hour_box">Happy Hour</string>
+    <string name="dinner_box">Dinner</string>
+    <string name="who_button">Who are you?</string>
+    <string name="who_are_you_text"></string>
+    <string name="next_button">Next!</string>
+
+    <string name="you_like">You like</string>
+    <string name="yes_button">YES!</string>
+    <string name="click_here_text">Click the image</string>
+    <string name="image_button"></string>
+
+
+</resources>

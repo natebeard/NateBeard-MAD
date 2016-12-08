@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">FinalPractice2</string>
+    <string name="name_textfield">Name</string>
+    <array name="mood">
+        <item>weird</item>
+        <item>curious looking</item>
+        <item>super tall and lanky</item>
+        <item>lactose intolerant</item>
+    </array>
+    <string name="toggle_on">Dude</string>
+    <string name="toggle_off">Chick</string>
+    <string name="friend_switch">Friends?</string>
+    <string name="drinks_text">Drink:</string>
+    <string name="drinks_radio_group"></string>
+    <string name="beer_radio">Beer</string>
+    <string name="whiskey_radio">Whiskey</string>
+    <string name="hungry_checkbox">Hungry</string>
+    <string name="chatty_checkbox">Chatty</string>
+    <string name="generate_button">What am I?</string>
+    <string name="text_result"></string>
+    <string name="find_place_button">WOW! Next?</string>
+
+    <string name="final_text_view"></string>
+    <string name="image_button"></string>
+</resources>
