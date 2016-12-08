@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Final</string>
+    <string name="label_text">I Scream for Ice Cream</string>
+    <string name="edit_text">Name your treat</string>
+    <array name="flavor_spinner">
+        <item>death by chocolate</item>
+        <item>cookies and cream</item>
+        <item>salted caramel</item>
+    </array>
+    <string name="type_of_ice_cream_radio_group"></string>
+    <string name="ice_cream_radio">ice cream</string>
+    <string name="frozen_yogurt_radio">frozen yogurt</string>
+    <string name="gelato_radio">gelato</string>
+    <string name="sprinkles_box">sprinkles</string>
+    <string name="fudge_box">hot fudge</string>
+    <string name="nuts_box">nuts</string>
+    <string name="treat_me_button">Treat Me</string>
+    <string name="result_text"></string>
+    <string name="ice_cream_image"></string>
+    <string name="find_treat_button">Find Treat</string>
+    
+    <string name="check_out_text_view">You should check out </string>
+    <string name="image_button_web"></string>
+</resources>
