@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.natebeard.afinal.MainActivity">
+
+    <TextView
+        android:text="@string/label_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/labelTextView" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="@string/edit_text"
+        android:ems="10"
+        android:layout_below="@+id/labelTextView"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="31dp"
+        android:id="@+id/editText" />
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText"
+        android:layout_marginTop="28dp"
+        android:id="@+id/spinner"
+        android:entries="@array/flavor_spinner"
+        android:spinnerMode="dropdown" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="22dp"
+        android:orientation="horizontal"
+        android:id="@+id/type_of_ice_cream_radio_group">
+
+        <RadioButton
+            android:text="@string/ice_cream_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/iceCreamRadioButton" />
+
+        <RadioButton
+            android:text="@string/frozen_yogurt_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/froyoRadioButton" />
+
+        <RadioButton
+            android:text="@string/gelato_radio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/gelatoRadioButton" />
+
+
+    </RadioGroup>
+
+    <CheckBox
+        android:text="@string/sprinkles_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/type_of_ice_cream_radio_group"
+        android:id="@+id/sprinklesCheckBox" />
+
+    <CheckBox
+        android:text="@string/fudge_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/sprinklesCheckBox"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/fudgeCheckBox" />
+
+    <CheckBox
+        android:text="@string/nuts_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/fudgeCheckBox"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="50dp"
+        android:id="@+id/nutsCheckBox" />
+
+    <Button
+        android:text="@string/treat_me_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/sprinklesCheckBox"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/treatMeButton"
+        android:onClick="generateTreatButton"/>
+
+    <TextView
+        android:text="@string/result_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/treatMeButton"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="13dp"
+        android:id="@+id/resultTextView"
+        android:layout_alignEnd="@+id/findTreatButton"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ice_cream_image"
+        android:layout_alignTop="@+id/resultTextView"
+        android:layout_alignParentEnd="true" />
+
+    <Button
+        android:text="@string/find_treat_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/findTreatButton"
+        android:onClick="findTreatButton"/>
+
+</RelativeLayout>
