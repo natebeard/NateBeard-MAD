@@ -23,12 +23,12 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:inputType="textPersonName"
-        android:text="@string/edit_text"
         android:ems="10"
         android:layout_below="@+id/labelTextView"
         android:layout_alignParentStart="true"
         android:layout_marginTop="31dp"
-        android:id="@+id/editText" />
+        android:id="@+id/editText"
+        android:hint="@string/edit_text" />
 
     <Spinner
         android:layout_width="match_parent"

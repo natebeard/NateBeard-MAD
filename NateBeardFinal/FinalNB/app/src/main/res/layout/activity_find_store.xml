@@ -28,6 +28,10 @@
         android:id="@+id/webImageButton"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="goWebsite"/>
+        android:onClick="goWebsite"
+        android:scaleType="fitCenter"
+        android:maxHeight="100dp"
+        android:maxWidth="100dp"
+        android:minHeight="50dp" />
 
 </RelativeLayout>
